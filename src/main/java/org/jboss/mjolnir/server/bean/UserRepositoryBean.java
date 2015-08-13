@@ -132,7 +132,7 @@ public class UserRepositoryBean implements UserRepository {
         Session session = sessionFactory.openSession();
 
         List<UserEntity> entityList = session.createCriteria(UserEntity.class).list();
-        final List<KerberosUser> users = new ArrayList<>();
+        final List<KerberosUser> users = new ArrayList<KerberosUser>();
 
         for(UserEntity entity : entityList) {
             final KerberosUser user = new KerberosUser();
